@@ -54,12 +54,13 @@ public class MainClass {
     }
 
     private static void newOrExit() throws IOException {
-        String answer;
+        Character answer;
         BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Сыграть еще раз? y/n");
-        answer = buffer.readLine().toLowerCase();
-        if (answer == "y")
+        answer = buffer.readLine().charAt(0);
+        if ((answer == 'y') || (answer == 'Y')){
             newGame();
+        }
         else {
             System.out.println("Удачи! :)");
             System.exit(0);
