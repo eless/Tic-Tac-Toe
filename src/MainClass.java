@@ -15,6 +15,7 @@ import java.util.Scanner;
 
 public class MainClass {
     private static GameField field;
+    private static int count;
     public static void main (String[] args) throws IOException {
 
         newGame();
@@ -28,11 +29,16 @@ public class MainClass {
         field = new GameField();
         printField();
 
-        for (int i = 0; i < 9; i++) {
-            if (i % 2 != 0){
+        for (count = 0; count < 9; count++) {
+            if (count % 2 != 0){
+                System.out.println("Ходит второй игрок.");
                 runStep('O');
             }
-            else runStep('X');
+            else {
+                System.out.println("Ходит первый игрок.");
+                runStep('X');
+            }
+
         }
         System.out.println("Ничья! Победила дружба :)");
         newOrExit();
@@ -67,7 +73,13 @@ public class MainClass {
         int i = scanner.nextInt() - 1;
         int j = scanner.nextInt() - 1;
         //System.out.println(i + ", " + j);
-        field.set(i, j, sign);
+        if (field.get(i, j) == ' '){
+            field.set(i, j, sign);
+        }
+        else {
+            System.out.println("Данная ячейка уже занята!");
+            count--;
+        }
         printField();
         if (stepCheck(i, j, sign)){
             System.out.println(winner(sign));
