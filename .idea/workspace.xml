@@ -4,15 +4,15 @@
     <list default="true" id="06e6e376-78ca-43ec-ba1f-fa3cfe9f1517" name="Default" comment="Fixed a new game. Does not come out when you press 'y' for the new game.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameField.java" afterPath="$PROJECT_DIR$/src/GameField.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainClass.java" afterPath="$PROJECT_DIR$/src/MainClass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tic-tac-toe.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/GameField.java" changelist="06e6e376-78ca-43ec-ba1f-fa3cfe9f1517" time="1375427312153" ignored="false" />
-    <file path="/MainClass.java" changelist="06e6e376-78ca-43ec-ba1f-fa3cfe9f1517" time="1375427244306" ignored="false" />
+    <file path="/GameField.java" changelist="06e6e376-78ca-43ec-ba1f-fa3cfe9f1517" time="1375430234615" ignored="false" />
+    <file path="/MainClass.java" changelist="06e6e376-78ca-43ec-ba1f-fa3cfe9f1517" time="1375430161076" ignored="false" />
     <file path="/Dummy.txt" changelist="06e6e376-78ca-43ec-ba1f-fa3cfe9f1517" time="1375427352039" ignored="false" />
     <file path="/a.dummy" changelist="06e6e376-78ca-43ec-ba1f-fa3cfe9f1517" time="1375356923421" ignored="false" />
     <file path="/fragment.java" changelist="06e6e376-78ca-43ec-ba1f-fa3cfe9f1517" time="1375357127584" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="06e6e376-78ca-43ec-ba1f-fa3cfe9f1517" time="1375427391988" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +76,7 @@
       <file leaf-file-name="GameField.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GameField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="38" selection-start="555" selection-end="555" vertical-scroll-proportion="0.7225">
+            <state line="33" column="28" selection-start="779" selection-end="791" vertical-scroll-proportion="0.5325">
               <folding />
             </state>
           </provider>
@@ -121,7 +121,7 @@
       <file leaf-file-name="MainClass.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="75" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0">
+            <state line="90" column="0" selection-start="2558" selection-end="2558" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -578,7 +578,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="75" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0">
+        <state line="90" column="0" selection-start="2558" selection-end="2558" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -587,7 +587,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameField.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="38" selection-start="555" selection-end="555" vertical-scroll-proportion="0.7225">
+        <state line="33" column="28" selection-start="779" selection-end="791" vertical-scroll-proportion="0.5325">
           <folding />
         </state>
       </provider>

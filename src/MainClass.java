@@ -28,7 +28,7 @@ public class MainClass {
     private static void newGame() throws IOException {
 
         field = new GameField();
-        printField();
+        field.printField();
 
         for (count = 0; count < 9; count++) {
             if (count % 2 != 0){
@@ -82,22 +82,13 @@ public class MainClass {
             System.out.println("Данная ячейка уже занята!");
             count--;
         }
-        printField();
+        field.printField();
         if (stepCheck(i, j, sign)){
             System.out.println(winner(sign));
             newOrExit();
         }
     }
-    //а здесь выводим игровое поле
-    static void printField(){
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                System.out.print("[" + field.get(i, j) + "]");
-            }
-            System.out.println();
-        }
 
-    }
     //определение, не получилась ли линия из одинаковых знаков
     static boolean stepCheck(int n, int m, Character sign){
         boolean chacked1 = true;

@@ -30,4 +30,15 @@ public class GameField {
         return this.field[i][j];
     }
 
+    //а здесь выводим игровое поле
+    public void printField(){
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print("[" + this.get(i, j) + "]");
+            }
+            System.out.println();
+        }
+
+    }
+
 }
