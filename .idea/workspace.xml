@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06e6e376-78ca-43ec-ba1f-fa3cfe9f1517" name="Default" comment="Fixed a new game. Does not come out when you press 'y' for the new game.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ArtificialIntelligence.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="06e6e376-78ca-43ec-ba1f-fa3cfe9f1517" name="Default" comment="Fixed a new game. Does not come out when you press 'y' for the new game." />
     <ignored path="Tic-tac-toe.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/GameField.java" changelist="06e6e376-78ca-43ec-ba1f-fa3cfe9f1517" time="1375430234615" ignored="false" />
@@ -85,7 +82,7 @@
       <file leaf-file-name="ArtificialIntelligence.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ArtificialIntelligence.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="29" selection-start="784" selection-end="784" vertical-scroll-proportion="0.6728232">
+            <state line="18" column="70" selection-start="614" selection-end="614" vertical-scroll-proportion="0.53825855">
               <folding />
             </state>
           </provider>
@@ -604,7 +601,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ArtificialIntelligence.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="29" selection-start="784" selection-end="784" vertical-scroll-proportion="0.6728232">
+        <state line="18" column="70" selection-start="614" selection-end="614" vertical-scroll-proportion="0.53825855">
           <folding />
         </state>
       </provider>
