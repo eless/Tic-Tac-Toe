@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06e6e376-78ca-43ec-ba1f-fa3cfe9f1517" name="Default" comment="Fixed a new game. Does not come out when you press 'y' for the new game.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameField.java" afterPath="$PROJECT_DIR$/src/GameField.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainClass.java" afterPath="$PROJECT_DIR$/src/MainClass.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ArtificialIntelligence.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tic-tac-toe.iws" />
@@ -13,6 +12,7 @@
     <file path="/Dummy.txt" changelist="06e6e376-78ca-43ec-ba1f-fa3cfe9f1517" time="1375427352039" ignored="false" />
     <file path="/a.dummy" changelist="06e6e376-78ca-43ec-ba1f-fa3cfe9f1517" time="1375356923421" ignored="false" />
     <file path="/fragment.java" changelist="06e6e376-78ca-43ec-ba1f-fa3cfe9f1517" time="1375357127584" ignored="false" />
+    <file path="/ArtificialIntelligence.java" changelist="06e6e376-78ca-43ec-ba1f-fa3cfe9f1517" time="1375450158039" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,10 +73,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GameField.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GameField.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="28" selection-start="779" selection-end="791" vertical-scroll-proportion="0.5325">
+            <state line="40" column="8" selection-start="993" selection-end="993" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArtificialIntelligence.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ArtificialIntelligence.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="29" selection-start="784" selection-end="784" vertical-scroll-proportion="0.6728232">
               <folding />
             </state>
           </provider>
@@ -149,6 +158,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/MainClass.java" />
         <option value="$PROJECT_DIR$/src/GameField.java" />
+        <option value="$PROJECT_DIR$/src/ArtificialIntelligence.java" />
       </list>
     </option>
   </component>
@@ -576,6 +586,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="8" selection-start="993" selection-end="993" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="90" column="0" selection-start="2558" selection-end="2558" vertical-scroll-proportion="0.0">
@@ -585,9 +602,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameField.java">
+    <entry file="file://$PROJECT_DIR$/src/ArtificialIntelligence.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="28" selection-start="779" selection-end="791" vertical-scroll-proportion="0.5325">
+        <state line="24" column="29" selection-start="784" selection-end="784" vertical-scroll-proportion="0.6728232">
           <folding />
         </state>
       </provider>
