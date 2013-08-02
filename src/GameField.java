@@ -10,10 +10,12 @@ public class GameField {
     final char TIC = 'X';
     final char TAC = 'O';
 
+    //конструктор заполняет поле пробелами
     GameField(){
         this.field = new char[][]{{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
 
     }
+    //сеттер (К.О.)
     public void set(int i, int j, char sign){
         if (sign == TIC) {
             this.field[i][j] = TIC;
@@ -23,6 +25,7 @@ public class GameField {
         }
     }
 
+    //геттер (К.О.)
     public char get(int i,int j){
         return this.field[i][j];
     }

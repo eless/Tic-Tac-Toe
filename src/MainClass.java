@@ -24,6 +24,7 @@ public class MainClass {
 
 
     }
+    //начинаем новую игру (иницализируем игровое поле, заполненое пробелами)
     private static void newGame() throws IOException {
 
         field = new GameField();
@@ -44,7 +45,7 @@ public class MainClass {
         newOrExit();
         System.exit(0);
     }
-
+    // Определение победителя
     private static String winner(Character sign){
         if (sign == 'X')
             return "Первый игрок победил!";
@@ -52,7 +53,7 @@ public class MainClass {
             return "Второй игрок победил!";
 
     }
-
+    // Начать новую игру или выйти?
     private static void newOrExit() throws IOException {
         Character answer;
         BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
@@ -66,7 +67,7 @@ public class MainClass {
             System.exit(0);
         }
     }
-
+    //Ввод координат, проверка победы (для простоты - после каждого шага)
     private static void runStep(Character sign) throws IOException {
         Scanner scanner = new Scanner(System.in);
 
@@ -87,6 +88,7 @@ public class MainClass {
             newOrExit();
         }
     }
+    //а здесь выводим игровое поле
     static void printField(){
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -96,6 +98,7 @@ public class MainClass {
         }
 
     }
+    //определение, не получилась ли линия из одинаковых знаков
     static boolean stepCheck(int n, int m, Character sign){
         boolean chacked1 = true;
         boolean chacked2 = true;
