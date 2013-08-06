@@ -41,4 +41,21 @@ public class GameField {
 
     }
 
+
+    /*public char[][] getField(){
+
+        return this.field;
+    }*/
+
+    //Ходим в клетку, проверяем успех
+    public boolean setInCell(int i, int j, Character sign){
+
+        if (this.get(i, j) == ' '){
+            this.set(i, j, sign);
+            return true;
+        }
+        return false;
+
+    }
+
 }

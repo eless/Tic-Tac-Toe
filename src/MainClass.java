@@ -16,6 +16,7 @@ import java.util.Scanner;
 public class MainClass {
     private static GameField field;
     private static int count;
+
     public static void main (String[] args) throws IOException {
 
         newGame();
@@ -23,6 +24,9 @@ public class MainClass {
 
 
 
+    }
+    public static GameField getField(){
+        return field;
     }
     //начинаем новую игру (иницализируем игровое поле, заполненое пробелами)
     private static void newGame() throws IOException {
@@ -75,10 +79,8 @@ public class MainClass {
         int i = scanner.nextInt() - 1;
         int j = scanner.nextInt() - 1;
         //System.out.println(i + ", " + j);
-        if (field.get(i, j) == ' '){
-            field.set(i, j, sign);
-        }
-        else {
+
+        if (!field.setInCell(i, j, sign)){
             System.out.println("Данная ячейка уже занята!");
             count--;
         }
