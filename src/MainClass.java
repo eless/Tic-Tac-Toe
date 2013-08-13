@@ -1,5 +1,4 @@
 
-import javafx.application.Platform;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -16,15 +15,29 @@ import java.util.Scanner;
 public class MainClass {
     private static GameField field;
     private static int count;
-
+    static AI al;
     public static void main (String[] args) throws IOException {
 
+        al = new AI(gameType());
         newGame();
 
 
 
 
     }
+    //устанавливаем тип игры
+    private static boolean gameType() throws IOException {
+        Character answer;
+        BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Играть против AI(введите \"1\") или PvP(2)?");
+        answer = buffer.readLine().charAt(0);
+        if (answer == '1')
+           return true;
+
+        return false;
+    }
+
+    //на будущее, может понадобится
     public static GameField getField(){
         return field;
     }
@@ -34,19 +47,30 @@ public class MainClass {
         field = new GameField();
         field.printField();
 
+
         for (count = 0; count < 9; count++) {
             if (count % 2 != 0){
                 System.out.println("Ходит второй игрок.");
+        //пока что AI будет только вторым
+                if (al.isOnAI()){
+                    if (al.computersStep(field, 'O')){
+                        field.printField();
+                        System.out.println(winner('O'));
+                        exitGame();
+                    }
+                }
+                else
                 runStep('O');
             }
             else {
                 System.out.println("Ходит первый игрок.");
-                runStep('X');
+
+                    runStep('X');
             }
 
         }
         System.out.println("Ничья! Победила дружба :)");
-        newOrExit();
+        exitGame();
         System.exit(0);
     }
     // Определение победителя
@@ -58,7 +82,7 @@ public class MainClass {
 
     }
     // Начать новую игру или выйти?
-    private static void newOrExit() throws IOException {
+    private static void exitGame() throws IOException {
         Character answer;
         BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Сыграть еще раз? y/n");
@@ -75,7 +99,7 @@ public class MainClass {
     private static void runStep(Character sign) throws IOException {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Введите координаты вашего хода через пробел (1-3 1-3):");
+        System.out.println("Введите координаты вашего хода через пробел (1-3 строка 1-3 столбик):");
         int i = scanner.nextInt() - 1;
         int j = scanner.nextInt() - 1;
         //System.out.println(i + ", " + j);
@@ -87,12 +111,12 @@ public class MainClass {
         field.printField();
         if (stepCheck(i, j, sign)){
             System.out.println(winner(sign));
-            newOrExit();
+            exitGame();
         }
     }
 
     //определение, не получилась ли линия из одинаковых знаков
-    static boolean stepCheck(int n, int m, Character sign){
+    public static boolean stepCheck(int n, int m, Character sign){
         boolean chacked1 = true;
         boolean chacked2 = true;
         boolean chacked3 = true;
