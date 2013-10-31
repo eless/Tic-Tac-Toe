@@ -25,11 +25,11 @@ public class MainClass {
 
 
     }
-    //СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј С‚РёРї РёРіСЂС‹
+    //устанавливаем тип игры
     private static boolean gameType() throws IOException {
         Character answer;
         BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("РРіСЂР°С‚СЊ РїСЂРѕС‚РёРІ AI(РІРІРµРґРёС‚Рµ \"1\") РёР»Рё PvP(2)?");
+        System.out.println("Играть против AI(введите \"1\") или PvP(2)?");
         answer = buffer.readLine().charAt(0);
         if (answer == '1')
            return true;
@@ -37,11 +37,11 @@ public class MainClass {
         return false;
     }
 
-    //РЅР° Р±СѓРґСѓС‰РµРµ, РјРѕР¶РµС‚ РїРѕРЅР°РґРѕР±РёС‚СЃСЏ
+    //на будущее, может понадобится
     public static GameField getField(){
         return field;
     }
-    //РЅР°С‡РёРЅР°РµРј РЅРѕРІСѓСЋ РёРіСЂСѓ (РёРЅРёС†Р°Р»РёР·РёСЂСѓРµРј РёРіСЂРѕРІРѕРµ РїРѕР»Рµ, Р·Р°РїРѕР»РЅРµРЅРѕРµ РїСЂРѕР±РµР»Р°РјРё)
+    //начинаем новую игру (иницализируем игровое поле, заполненое пробелами)
     private static void newGame() throws IOException {
 
         field = new GameField();
@@ -50,8 +50,8 @@ public class MainClass {
 
         for (count = 0; count < 9; count++) {
             if (count % 2 != 0){
-                System.out.println("РҐРѕРґРёС‚ РІС‚РѕСЂРѕР№ РёРіСЂРѕРє.");
-        //РїРѕРєР° С‡С‚Рѕ AI Р±СѓРґРµС‚ С‚РѕР»СЊРєРѕ РІС‚РѕСЂС‹Рј
+                System.out.println("Ходит второй игрок.");
+        //пока что AI будет только вторым
                 if (al.isOnAI()){
                     if (al.computersStep(field, 'O')){
                         field.printField();
@@ -63,49 +63,49 @@ public class MainClass {
                 runStep('O');
             }
             else {
-                System.out.println("РҐРѕРґРёС‚ РїРµСЂРІС‹Р№ РёРіСЂРѕРє.");
+                System.out.println("Ходит первый игрок.");
 
                     runStep('X');
             }
 
         }
-        System.out.println("РќРёС‡СЊСЏ! РџРѕР±РµРґРёР»Р° РґСЂСѓР¶Р±Р° :)");
+        System.out.println("Ничья! Победила дружба :)");
         exitGame();
         System.exit(0);
     }
-    // РћРїСЂРµРґРµР»РµРЅРёРµ РїРѕР±РµРґРёС‚РµР»СЏ
+    // Определение победителя
     private static String winner(Character sign){
         if (sign == 'X')
-            return "РџРµСЂРІС‹Р№ РёРіСЂРѕРє РїРѕР±РµРґРёР»!";
+            return "Первый игрок победил!";
         else
-            return "Р’С‚РѕСЂРѕР№ РёРіСЂРѕРє РїРѕР±РµРґРёР»!";
+            return "Второй игрок победил!";
 
     }
-    // РќР°С‡Р°С‚СЊ РЅРѕРІСѓСЋ РёРіСЂСѓ РёР»Рё РІС‹Р№С‚Рё?
+    // Начать новую игру или выйти?
     private static void exitGame() throws IOException {
         Character answer;
         BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("РЎС‹РіСЂР°С‚СЊ РµС‰Рµ СЂР°Р·? y/n");
+        System.out.println("Сыграть еще раз? y/n");
         answer = buffer.readLine().charAt(0);
         if ((answer == 'y') || (answer == 'Y')){
             newGame();
         }
         else {
-            System.out.println("РЈРґР°С‡Рё! :)");
+            System.out.println("Удачи! :)");
             System.exit(0);
         }
     }
-    //Р’РІРѕРґ РєРѕРѕСЂРґРёРЅР°С‚, РїСЂРѕРІРµСЂРєР° РїРѕР±РµРґС‹ (РґР»СЏ РїСЂРѕСЃС‚РѕС‚С‹ - РїРѕСЃР»Рµ РєР°Р¶РґРѕРіРѕ С€Р°РіР°)
+    //Ввод координат, проверка победы (для простоты - после каждого шага)
     private static void runStep(Character sign) throws IOException {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ РІР°С€РµРіРѕ С…РѕРґР° С‡РµСЂРµР· РїСЂРѕР±РµР» (1-3 СЃС‚СЂРѕРєР° 1-3 СЃС‚РѕР»Р±РёРє):");
+        System.out.println("Введите координаты вашего хода через пробел (1-3 строка 1-3 столбик):");
         int i = scanner.nextInt() - 1;
         int j = scanner.nextInt() - 1;
         //System.out.println(i + ", " + j);
 
         if (!field.setInCell(i, j, sign)){
-            System.out.println("Р”Р°РЅРЅР°СЏ СЏС‡РµР№РєР° СѓР¶Рµ Р·Р°РЅСЏС‚Р°!");
+            System.out.println("Данная ячейка уже занята!");
             count--;
         }
         field.printField();
@@ -115,7 +115,7 @@ public class MainClass {
         }
     }
 
-    //РѕРїСЂРµРґРµР»РµРЅРёРµ, РЅРµ РїРѕР»СѓС‡РёР»Р°СЃСЊ Р»Рё Р»РёРЅРёСЏ РёР· РѕРґРёРЅР°РєРѕРІС‹С… Р·РЅР°РєРѕРІ
+    //определение, не получилась ли линия из одинаковых знаков
     public static boolean stepCheck(int n, int m, Character sign){
         boolean chacked1 = true;
         boolean chacked2 = true;
